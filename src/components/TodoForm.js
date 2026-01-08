@@ -8,7 +8,6 @@ export default function TodoForm({ addTodo }) {
     if (!title.trim()) return;
 
     const todo = {
-      id: Date.now(),
       title: title.trim(),
       completed: false,
     };

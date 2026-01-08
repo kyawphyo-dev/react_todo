@@ -44,13 +44,35 @@ function App() {
       });
     });
   };
+
+  //Update Feature
+  let updateTodo = (newTodo) => {
+    //update on server
+    fetch(`http://localhost:3001/todos/${newTodo.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newTodo),
+    });
+    //update on state
+    setTodos((prevTodos) => {
+      return prevTodos.map((todo) => {
+        return todo.id === newTodo.id ? newTodo : todo;
+      });
+    });
+  };
   return (
     <div className="todo-app-container">
       <div className="todo-app">
         <h2>Todo App</h2>
         <TodoForm addTodo={addTodo} />
 
-        <TodoList todos={todos} deleteTodo={deleteTodo} />
+        <TodoList
+          todos={todos}
+          deleteTodo={deleteTodo}
+          updateTodo={updateTodo}
+        />
 
         <CheckAllandRemaining />
 
