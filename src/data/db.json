@@ -3,7 +3,17 @@
     {
       "id": "482e",
       "title": "My first todo update",
-      "completed": false
+      "completed": true
+    },
+    {
+      "id": "5433",
+      "title": "My sec todo",
+      "completed": true
+    },
+    {
+      "id": "2f27",
+      "title": "My third todo",
+      "completed": true
     }
   ]
 }

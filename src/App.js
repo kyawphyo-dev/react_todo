@@ -62,6 +62,22 @@ function App() {
       });
     });
   };
+  //Checkall feature
+  let checkAll = () => {
+    //update on server
+    todos.forEach((todo) => {
+      todo.completed = true;
+      updateTodo(todo);
+    });
+    //update on state
+    setTodos((prevTodos) => {
+      return prevTodos.map((todo) => {
+        return { ...todo, completed: true };
+      });
+    });
+  };
+
+  let remainingCount = todos.filter((todo) => !todo.completed).length;
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -74,7 +90,10 @@ function App() {
           updateTodo={updateTodo}
         />
 
-        <CheckAllandRemaining />
+        <CheckAllandRemaining
+          remainingCount={remainingCount}
+          checkAll={checkAll}
+        />
 
         <div className="other-buttons-container">
           <FilterBtns />
