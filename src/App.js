@@ -30,13 +30,27 @@ function App() {
     //update the state
     setTodos((prevTodos) => [...prevTodos, todo]);
   };
+
+  //Delete Feature
+  let deleteTodo = (id) => {
+    //delete from server
+    fetch(`http://localhost:3001/todos/${id}`, {
+      method: "DELETE",
+    });
+    //delete from state
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => {
+        return todo.id !== id;
+      });
+    });
+  };
   return (
     <div className="todo-app-container">
       <div className="todo-app">
         <h2>Todo App</h2>
         <TodoForm addTodo={addTodo} />
 
-        <TodoList todos={todos} />
+        <TodoList todos={todos} deleteTodo={deleteTodo} />
 
         <CheckAllandRemaining />
 
