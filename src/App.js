@@ -78,6 +78,35 @@ function App() {
   };
 
   let remainingCount = todos.filter((todo) => !todo.completed).length;
+
+  //Clear completed feature
+  let clearCompleted = () => {
+    //delete from server
+    todos.forEach((todo) => {
+      if (todo.completed) {
+        deleteTodo(todo.id);
+      }
+    });
+    //delete from state
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => {
+        return !todo.completed;
+      });
+    });
+  };
+
+  //check feature
+  // let check = (id) => {
+  //   //update on server
+
+  //   //update on state
+  //   setTodos((prevState) => {
+  //     // eslint-disable-next-line array-callback-return
+  //     return prevState.map((todo) => {
+  //       return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
+  //     });
+  //   });
+  // };
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -98,7 +127,7 @@ function App() {
         <div className="other-buttons-container">
           <FilterBtns />
 
-          <ClearCompletedBtn />
+          <ClearCompletedBtn clearCompleted={clearCompleted} />
         </div>
       </div>
     </div>
