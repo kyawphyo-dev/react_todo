@@ -57,22 +57,31 @@ http://localhost:3001/todos
 ```bash
 git clone https://github.com/your-username/react-todo-app.git
 cd react-todo-app
+```
 
-2️⃣ Install dependencies
+### 2️⃣ Install dependencies
+
+```bash
 npm install
+```
 
-3️⃣ Start JSON Server
+### 3️⃣ Start JSON Server
+
+```bash
 npx json-server --watch src/db.json --port 3001
+```
 
-4️⃣ Start React App
+### 4️⃣ Start React App
+
+```bash
 npm start
-
+```
 
 The app will run at:
 
 http://localhost:3000
 
-🎯 Learning Goals
+### 🎯 Learning Goals
 
 This project is built to practice:
 
@@ -99,4 +108,7 @@ React Practice Project
 📄 License
 
 This project is for learning and practice purposes only.
+
+```
+
 ```
