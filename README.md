@@ -28,18 +28,6 @@ This project is created for **practice purposes** to understand React fundamenta
 
 ---
 
-## 📂 Project Structure (Simplified)
-
-src/
-├── components/
-├── hooks/
-├── pages/
-├── db.json
-├── App.js
-└── index.js
-
----
-
 ## 📡 API & Data Storage
 
 - All todo data is stored in **db.json**
@@ -83,32 +71,28 @@ http://localhost:3000
 
 ### 🎯 Learning Goals
 
-This project is built to practice:
+##### This project is built to practice:
 
-React components and props
+- React components and props
 
-useState and useEffect hooks
+- useState and useEffect hooks
 
-CRUD operations with REST APIs
+- CRUD operations with REST APIs
 
-Conditional rendering
+- Conditional rendering
 
-Basic UI and state management
+- Basic UI and state management
 
-📸 UI Preview
+### 📸 UI Preview
 
-(./assets/Screenshot.png)
+![Todo App Screenshot](./assets/Screenshot.png)
 
 👤 Author
 
-Kyaw Phyo Win
-Junior Web Developer
-React Practice Project
+- Kyaw Phyo Win
+- Junior Web Developer
+- React Practice Project
 
 📄 License
 
 This project is for learning and practice purposes only.
-
-```
-
-```
