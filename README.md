@@ -85,7 +85,7 @@ http://localhost:3000
 
 ### 📸 UI Preview
 
-![Todo App Screenshot](./assets/Screenshot.png)
+![Todo App Screenshot](./src/assets/Screenshot.png)
 
 👤 Author
 
